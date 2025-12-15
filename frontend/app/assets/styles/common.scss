@@ -1,0 +1,181 @@
+@use 'vars.scss' as *;
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/fonts/mulish/Mulish-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/fonts/mulish/Mulish-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+:root {
+  color-scheme: light;
+
+  --base-transition: 0.25s ease;
+}
+
+html {
+  height: 100%;
+  overflow: initial !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  * {
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  background-color: $maingreybg;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  min-height: -webkit-fill-available;
+}
+
+#__nuxt {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+p {
+  margin: 0
+}
+
+input,
+textarea {
+  appearance: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.ml-a {
+  margin-left: auto !important
+}
+
+.mr-a {
+  margin-right: auto !important
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.text-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.hidden-pc {
+  @media screen and (min-width: $lg) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include lg {
+    display: none !important;
+  }
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}

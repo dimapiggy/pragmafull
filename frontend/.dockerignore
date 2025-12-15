@@ -1,0 +1,14 @@
+**/node_modules
+**/dist
+**/.output
+**/.nuxt
+**/.git
+**/.vscode
+**/Dockerfile
+**/.dockerignore
+**/README.md
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.env
+**/.env.*
